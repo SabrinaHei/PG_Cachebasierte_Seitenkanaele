@@ -1,0 +1,10 @@
+Versionsinformationen zu cachebasiertem Fl+Fl Seitenkanal Chat:
+Programmaufruf:	../obj/firstreceive 
+Projekt Version:	git-7241ac0db0f9373f4af5559fe16746a2ba72a5b1
+Betriebssystem:	Ubuntu 20.04.1 LTS
+Kernel Version:	5.4.0-48-generic
+Compiler Version:	clang version 10.0.0-4ubuntu1 
+Gnuplot Version:	gnuplot 5.2 patchlevel 8
+Kompilierungs Datum:	Mi, 30. Sep 2020
+Versions Kommentar:	Mit Randomisierter String Erzeugung und Fehlerüberprüfung + ASCII + Chat
+Datei Memoryaccess: 	Mit inline Funktionen
