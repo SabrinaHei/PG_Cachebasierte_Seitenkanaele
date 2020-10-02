@@ -32,13 +32,13 @@ dem Ausführen von *install.sh* sind somit alle Programme sofort verwendbar. Es 
 durch die Makefiles genannten Hinweise zur Ausführung zu verwenden.
 
 1. Zuerst sollte durch das Kalibrierungsprogramm ein geeigneter Threshold gefunden werden.  
-**/Code/calibration:** `$ make run`
+**/Code/calibration_fl+fl:** `$ make run`
 2. Der neue Threshold und die gewünschte Übertragungsgeschwindigkeit für den Chat kann verändert werden.  
-**/Code/fl+fl:** `$ make conf`
+**/Code/chat_mit_fl+fl:** `$ make conf`
 3. Chat im Empfängermodus starten.  
-**/Code/fl+fl:** `$ make runr`
+**/Code/chat_mit_fl+fl:** `$ make runr`
 4. Chat im Sendemodus in neuem Fenster starten.  
-**/Code/fl+fl:** `$ make runs`
+**/Code/chat_mit_fl+fl:** `$ make runs`
 
 Optional:
 * Überprüfungsmodus beim Chat einschalten ( `$ make runr ARGS=’check’` bzw. `$ make runs ARGS=’check’`)
@@ -47,7 +47,7 @@ Optional:
 
 ### 3. Datei- und Ordnerstruktur
 
-**/Code/calibration:** Automatische Bestimmung des Thresholds
+**/Code/calibration_fl+fl:** Automatische Bestimmung des Thresholds
 
 * *calibration.c*:NUMBER_OF_REP wiederholte Threshold Messungen, Bestimmung des Durchschnitts dieser Messungen  
   
@@ -62,7 +62,7 @@ Optional:
 
 -------------------------------------------------------
 
-**/Code/fl+fl:** Flush + Flush Seitenkanal Anwendung
+**/Code/chat_mit_fl+fl:** Flush + Flush Seitenkanal Anwendung
 
 * *receiver.c*: Empfangsfunktionalitäten (Synchronisation, Empfangen von Bit-Strings, Umwandlung Binär zu ASCII, optionale Überprüfung der Korrektheit der empfangen Daten)
 * *sender.c*: Sendefunktionalitäten (Synchronisation, Senden von Bitstrings, Umwandlung ASCII zu Binär, optionale randomisierte Erzeugung von Bit-Strings)
@@ -96,7 +96,7 @@ automatisierte Analyse durchführen, Analyseergebnisse anzeigen, aufräumen
 ---------------------
 
 **/Code/memoryaccess:** Für Flush + Flush benötigte Speicher-Funktionalitäten
-* *memoryaccess.c*: Messung von benötigten CPU-Zykeln, Zugriffauf Speicherstelle, Flushen von
+* *memoryaccess.c*: Messung von benötigten CPU-Zyklen, Zugriffauf Speicherstelle, Flushen von
 Speicherstelle, Kombifunktionen zum Messen der Flushzeit im allgemeinen (Chat), bei Hit
 und bei Miss (Calibration)
 * *memoryaccess.h*: Headerdatei zu memoryaccess.c
